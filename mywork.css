@@ -1,0 +1,219 @@
+
+
+/* Fade til sidene, når du kommer in på siden vil en animation skje*/
+.page-fade {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    animation: fadeInPage 3s ease forwards;
+
+}
+/* Keyframes til fade animationen */
+@keyframes fadeInPage {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+/* Brukes til å få teksten å bli dersom du minimizer nettsiden. */
+
+html {
+    font-size: clamp(14px, 1vw, 18px);
+}
+
+
+
+
+
+/* Hoved basen til "mywork" alstå navbar og bakgrunn. */
+body {
+    background-color: #232323;
+}
+
+#navn {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+}
+
+.navbar {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 1.8rem;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+}
+
+.name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+
+.navbar a {
+color: white;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none
+}
+
+#work {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+.title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 11.5rem;
+    line-height: 0rem;
+}
+
+#maintitle {
+    font-size: 2rem ;
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+}
+
+#subtitle {
+    color: #adadad;
+    font-size: 1.2rem;
+     font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Til alle de forksjellige temaene/prosjekter som du kan klikke deg in på, brukte de for å gi dem et bestemt størrelse og 
+få de på plass, fikk ikke til å gi dem et spesiell plassering som figma prototypen, men ble svært fornøyd */
+
+
+.gallery {
+    margin-top: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-auto-rows: 220px;
+    gap: 26.5rem;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.boks1 {
+    overflow: hidden;
+    width: 40rem;
+    height: 40rem;
+}
+
+.boks1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.boks2 {
+    overflow: hidden;
+    width: 40rem;
+    height: 40rem;
+}
+
+.boks2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+
+.boks1,
+.boks2 {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* brukes til når du har mus pekeren over bildene vil de lyse hvit */
+
+.boks1::after,
+.boks2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.889);
+    opacity: 0;
+    transition: opacity 0.3 ease;
+}
+
+.boks1:hover::after,
+.boks2:hover::after {
+    opacity: 1;
+}
+
+
+
+/* Når du har mus pekeren over bildene vil tekst komme opp i bildet. */
+
+.hover-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(0, 0, 0);
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+.boks1:hover .hover-text,
+.boks2:hover .hover-text {
+    opacity: 1;
+}

@@ -1,0 +1,80 @@
+/* Fade til sidene, når du kommer in på siden vil en animation skje*/
+
+.page-fade {
+    position: fixed;
+    inset: 0;
+    background: black;
+    z-index: 9999;
+    animation: fadeInPage 3s ease forwards;
+
+}
+
+/* Keyframes til fade animationen */
+
+@keyframes fadeInPage {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+/* Brukes til å få teksten å bli dersom du minimizer nettsiden. */
+
+html {
+    font-size: clamp(14px, 1vw, 18px);
+}
+
+
+
+/* Hoved basen til "mywork" alstå navbar og bakgrunn. */
+
+body {
+    background-color: #232323;
+}
+
+#navn {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+}
+
+.navbar {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    gap: 1.8rem;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+}
+
+.name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+
+.navbar a {
+color: white;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  text-decoration: none
+}
+
+
+/* Hadde ikke tid til å legge til bildene i html, fordi jeg fokuserte meste parten av nettsiden til å se bra ut. */
