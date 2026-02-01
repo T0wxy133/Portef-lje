@@ -130,6 +130,15 @@ få de på plass, fikk ikke til å gi dem et spesiell plassering som figma proto
 
 
 .gallery {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.25rem;
+}
+
+.gallery {
     margin-top: 40rem;
     display: grid;
     grid-template-columns: repeat(2, 250px);
